@@ -4,6 +4,8 @@ def next_magic_num(n):
     s = str(n)
     hossz = len(s)
 
+    if set(s) == {"9"}:
+        return int("1" + "0" * (hossz - 1) + "1")
 
     fele = (hossz + 1) // 2
     bal = s[:fele]
